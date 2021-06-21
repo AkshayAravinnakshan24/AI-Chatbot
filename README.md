@@ -1,41 +1,83 @@
-# AI-Chatbot
-Chatbot using Bag-of-words and UI development 
+# Implementation of a Contextual Chatbot in PyTorch.  
+Simple chatbot implementation with PyTorch. 
 
+- The implementation should be easy to follow for beginners and provide a basic understanding of chatbots.
+- The implementation is straightforward with a Feed Forward Neural net with 2 hidden layers.
+- Customization for your own use case is super easy. Just modify `intents.json` with possible patterns and responses and re-run the training (see below for more info).
 
-# GPT2-Stance-Analysis
-## File Description
-1. The full code used for model training is saved in mytrain.py. 
-2. Intents.json is the custom made dataset file. It consists of different intent on which the BOT is trained on. It also includes input sentences and their corresponding responses
-3.  Chat.py: consists of the code to run the chatbot in Terminal window.
-4.  ChatforUI.py consists of the code to send the chatbot responses to app.py.
-5.  app.py includes the code for chatbot GUI.  
-6.  Model.py: Model definition is done in this py file. Consists of all the different layers of the  Nueral network model that is used for training.
-7.  data.pth: The model parameters after training is stored in this file. 
-## 1. Usage
-#Chatbot in GUI:
-1. Download the repository 
-2. Run the chatforUI.py file to get the GUI of the bot.
+The approach is inspired by this article and ported to PyTorch: [https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077).
 
-#Chatbot in Terminal:
-1. Download the repository 
-2. Run the app.py file to get the GUI of the bot.
+## Watch the Tutorial
+[![Alt text](https://img.youtube.com/vi/RpWeNzfSUHw/hqdefault.jpg)](https://www.youtube.com/watch?v=RpWeNzfSUHw&list=PLqnslRFeH2UrFW4AUgn-eY37qOAWQpJyg)
 
-## 2. Dataset
-The chatbot can be easily customized to perform tasks related to the required intent.
-Just change the intents.json file, and train the model for the required intent
-The  Keys in the intents.json file stand for 
-tag: with the intent name,
-patterns: example input sentences 
-response: How the bot should respond to the sentences
-```json
-{
-      "tag": "goodbye",  
-      "patterns": [ "Bye", "See you later", "Goodbye" ],     
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]                                                    
-    },
+## Installation
+
+### Create an environment
+Whatever you prefer (e.g. `conda` or `venv`)
+```console
+mkdir myproject
+$ cd myproject
+$ python3 -m venv venv
 ```
 
+### Activate it
+Mac / Linux:
+```console
+. venv/bin/activate
+```
+Windows:
+```console
+venv\Scripts\activate
+```
+### Install PyTorch and dependencies
+
+For Installation of PyTorch see [official website](https://pytorch.org/).
+
+You also need `nltk`:
+ ```console
+pip install nltk
+ ```
+
+If you get an error during the first run, you also need to install `nltk.tokenize.punkt`:
+Run this once in your terminal:
+ ```console
+$ python
+>>> import nltk
+>>> nltk.download('punkt')
+```
+
+## Usage
+Run
+```console
+python train.py
+```
+This will dump `data.pth` file. And then run
+```console
+python chat.py
+```
+## Customize
+Have a look at [intents.json](intents.json). You can customize it according to your own use case. Just define a new `tag`, possible `patterns`, and possible `responses` for the chat bot. You have to re-run the training whenever this file is modified.
+```console
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    ...
+  ]
+}
+```

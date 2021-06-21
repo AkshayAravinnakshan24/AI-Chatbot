@@ -1,0 +1,113 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good Morning",
+        "Morning",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-) I am AIbot, welcome to our website",
+        "Hello, Welcome to Macrosoft website",
+        "Good morning, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [ "Bye", "See you later", "Goodbye" ],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [ "Thanks", "Thank you", "That's helpful", "Thank's a lot!" ],
+      "responses": [ "Happy to help!", "Any time!", "My pleasure" ]
+    },
+    {
+      "tag": "items",
+      "patterns": [
+        "Which items do you have?",
+        "What kinds of items are there?",
+        "Which services d you provide?",
+        "Available services",
+        "What do you sell?"
+      ],
+      "responses": [
+        "We provide services related to Virtual Machine and Artificial Intelligence \n For more information on our VMs please visit https://docs.macrosoft.com/en-us/azure/virtual-machines/windows/overview",
+        "Our services include High powered Virtual Machines and AI Solutions \n For more information on our VMs please visit https://docs.macrosoft.com/en-us/azure/virtual-machines/windows/overview",
+        "We provide VM and AI services \n For more information on our VMs please visit https://docs.macrosoft.com/en-us/azure/virtual-machines/windows/overview"
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with EC card?",
+        "Do you accept visa card?",
+        "Do you take Paypal?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and Paypal",
+        "We accept most major credit cards, and Paypal"
+      ]
+    },
+    {
+      "tag": "Activation time",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does activation take?",
+        "How much time is needed to enable my account?",
+        "When will my services be activated?",
+        "When can I start using my VM"
+      ],
+      "responses": [
+        "Activation takes place immediately",
+        "You can start using our services immediately after purchase"
+      ]
+    },
+    {
+      "tag": "Asking for Price",
+      "patterns": [
+        "cost of renting a VM",
+        "I would like to purchase a Virtual Machine",
+        "I would like to buy a VM",
+        "How much for a VM",
+        "Can I purchase a VM"
+      ],
+      "responses": [
+        "For information about the pricing of our various VM. Please use our pricing calculator: https://azure.macrosoft.com/en-us/pricing/calculator/RoCzw8QAvD_BwE",
+        "For information about our pricing on Virtual machines. Please use our pricing calculator: https://azure.macrosoft.com/en-us/pricing/calculator/RoCzw8QAvD_BwE"
+      ]
+    },
+    {
+      "tag": "Problem ",
+      "patterns": [
+        "Not working",
+        "Help",
+        "I dont understand",
+        "I have a problem with billing",
+        "Not able to pay with my card",
+        "Unable to process the payment",
+        "Transcation denied",
+        "I want to speak with customer care"
+      ],
+      "responses": [
+        " Sorry for the inconvinence. Our Macrosoft sales executive can help you with this problem. Please contact them as per your choice: Toll free number: 0800-589-1487 \n Email: Customerservices@microsoft.com",
+        " Sorry for the inconvinence. Please get in contact with one of our sales executive as per your choice: Toll free number: 0800-589-1487 \n Email: Customerservices@microsoft.com"
+      ]
+    }
+  ]
+}
